@@ -1,13 +1,3 @@
-CREATE TABLE Pedidos (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    id_Cliente INT,
-    id_Produtos INT,
-    quantidade INT,
-    status INT NOT NULL,
-    FOREIGN KEY (id_Cliente) REFERENCES Clientes(ID),
-    FOREIGN KEY (id_Produtos) REFERENCES Produtos(ID)
-);
-
 CREATE TABLE Leads (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     Nome VARCHAR(100) not null,
@@ -20,16 +10,6 @@ CREATE TABLE Leads (
     DataCadastro VARCHAR(100)
 );
 
-CREATE TABLE Atendimentos (
-    id_Funcionario INT,
-    id_Cliente INT,
-    data_hora DATETIME,
-    tipo_atendimento VARCHAR(255) NOT NULL,
-    conteudo VARCHAR(255),
-    atendimento ENUM('disponivel', 'indisponivel') NOT NULL,
-    PRIMARY KEY (id_Funcionario, id_Cliente)
-);
-
 CREATE TABLE Produtos (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     tipo INT,
@@ -40,11 +20,23 @@ CREATE TABLE Produtos (
     Nome_Produto VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE Camp_Personalizados_Clientes (
-    id_Cliente INT PRIMARY KEY AUTO_INCREMENT,
-    campo_personalizado VARCHAR(255) NOT NULL,
-    detalhe VARCHAR(255),
-    FOREIGN KEY id_Cliente REFERENCES Clientes(ID)
+CREATE TABLE Atendimentos (
+    id_Funcionario INT,
+    id_Cliente INT,
+    data_hora DATETIME,
+    tipo_atendimento VARCHAR(255) NOT NULL,
+    conteudo VARCHAR(255),
+    atendimento ENUM('disponivel', 'indisponivel') NOT NULL,
+    PRIMARY KEY (id_Funcionario, id_Cliente)
+);
+
+CREATE TABLE Interesse_e_Temperatura (
+    Interesse_Temperatura_Cliente INT PRIMARY KEY AUTO_INCREMENT,
+    Produto INT,
+    Quantidade INT,
+    Valor_Total INT NOT NULL,
+    Status VARCHAR(255),
+    Numero_Pedido INT NOT NULL
 );
 
 CREATE TABLE Clientes (
@@ -55,6 +47,25 @@ CREATE TABLE Clientes (
     Endereco VARCHAR(255),
     Interesses VARCHAR(255)
 );
+
+CREATE TABLE Pedidos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    id_Cliente INT,
+    id_Produtos INT,
+    quantidade INT,
+    status INT NOT NULL,
+    FOREIGN KEY (id_Cliente) REFERENCES Clientes(ID),
+    FOREIGN KEY (id_Produtos) REFERENCES Produtos(ID)
+);
+
+CREATE TABLE Camp_Personalizados_Clientes (
+    id_Cliente INT PRIMARY KEY AUTO_INCREMENT,
+    campo_personalizado VARCHAR(255) NOT NULL,
+    detalhe VARCHAR(255),
+    FOREIGN KEY id_Cliente REFERENCES Clientes(ID)
+);
+
+
 
 CREATE TABLE Interesses (
     id_Cliente INT,
@@ -74,13 +85,4 @@ CREATE TABLE Clientes_Atendidos_por_Funcionario (
     id_Clientes INT,
     FOREIGN KEY id_Funcionario REFERENCES Funcionarios(ID),
     FOREIGN KEY id_Clientes REFERENCES Clientes(ID)
-);
-
-CREATE TABLE Interesse_e_Temperatura (
-    Interesse_Temperatura_Cliente INT PRIMARY KEY AUTO_INCREMENT,
-    Produto INT,
-    Quantidade INT,
-    Valor_Total INT NOT NULL,
-    Status VARCHAR(255),
-    Numero_Pedido INT NOT NULL
 );
