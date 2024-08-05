@@ -1,0 +1,6 @@
+Leads: ID, Nome, Email, Telefone, Interesse, Fonte, Temperatura, Status, Data de Cadastro
+Funcionários: ID, Nome, Email, Telefone, Horário de Trabalho, Registro de Ponto
+Produtos: ID, Nome, Descrição, Variações, Estoque, Valor, Imagem
+Pedidos: ID, ClienteID, ProdutoID, Quantidade, Valor, Data, VendedorID
+Interações: ID, LeadID, FuncionarioID, Tipo, Data, Observacao
+Campos Personalizados: ID, LeadID, NomeCampo, Valor
