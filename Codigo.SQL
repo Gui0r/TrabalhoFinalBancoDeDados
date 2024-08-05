@@ -55,7 +55,7 @@ CREATE TABLE Interesses (
 CREATE TABLE Funcionarios (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     Nome VARCHAR(255) NOT NULL,
-    Cargo INT,
+    Cargo VARCHAR(100),
     HorarioTrabalho DATETIME NOT NULL
 );
 
