@@ -4,5 +4,6 @@ Produtos: ID, Nome, Descrição, Variações, Estoque, Valor, Imagem
 Pedidos: ID, ClienteID, ProdutoID, Quantidade, Valor, Data, VendedorID
 Interações: ID, LeadID, FuncionarioID, Tipo, Data, Observacao
 Campos_Personalizados: ID, LeadID, NomeCampo, Valor
+Clientes: ID PK, Nome, email, Telefone, Endereco, Interesses
 Atendimentos: id, PK id_Funcionario, PK id_Cliente, data_hora, tipo_atendimento, conteudo, atendimento
 Clientes_Atendidos_por_Funcionario: id_Funcionario FK, id_Clientes FK
