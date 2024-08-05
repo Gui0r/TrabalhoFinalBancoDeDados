@@ -1,8 +1,8 @@
 CREATE TABLE Leads (
     ID INT PRIMARY KEY AUTO_INCREMENT,
-    Nome VARCHAR(100) not null,
-    Email VARCHAR(100) UNIQUE not null,
-    Telefone VARCHAR(15) not null,
+    Nome VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    Telefone VARCHAR(15) NOT NULL,
     Interesse TEXT,
     Fonte VARCHAR(50),
     Temperatura ENUM('quente', 'frio', 'venda perdida'),
