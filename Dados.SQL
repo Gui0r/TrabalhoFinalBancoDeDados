@@ -1,26 +1,27 @@
 INSERT INTO `Clientes` (`ID`, `Nome`, `Email`, `Telefone`, `Endereco`, `Interesses`)
 VALUES
-(1, 'João Silva', NULL, NULL, NULL, NULL),
-(2, 'Maria Oliveira', NULL, NULL, NULL, NULL),
-(3, 'Pedro Santos', NULL, NULL, NULL, NULL),
-(4, 'Ana Paula', NULL, NULL, NULL, NULL),
-(5, 'Carlos Souza', NULL, NULL, NULL, NULL),
-(6, 'Beatriz Lima', NULL, NULL, NULL, NULL),
-(7, 'Lucas Almeida', NULL, NULL, NULL, NULL),
-(8, 'Laura Costa', NULL, NULL, NULL, NULL),
-(9, 'Marcos Pereira', NULL, NULL, NULL, NULL),
-(10, 'Sofia Ferreira', NULL, NULL, NULL, NULL),
-(11, 'Rafael Rodrigues', NULL, NULL, NULL, NULL),
-(12, 'Fernanda Melo', NULL, NULL, NULL, NULL),
-(13, 'Gustavo Lima', NULL, NULL, NULL, NULL),
-(14, 'Aline Souza', NULL, NULL, NULL, NULL),
-(15, 'Thiago Silva', NULL, NULL, NULL, NULL),
-(16, 'Gabriela Santos', NULL, NULL, NULL, NULL),
-(17, 'Felipe Martins', NULL, NULL, NULL, NULL),
-(18, 'Mariana Carvalho', NULL, NULL, NULL, NULL),
-(19, 'Bruno Almeida', NULL, NULL, NULL, NULL),
-(20, 'Camila Oliveira', NULL, NULL, NULL, NULL),
-(21, 'André Costa', NULL, NULL, NULL, NULL);
+(1, 'João Silva', 'joao.silva@example.com', '11999990001', 'Rua A, 123', 'Esportes, Leitura'),
+(2, 'Maria Oliveira', 'maria.oliveira@example.com', '11999990002', 'Rua B, 456', 'Culinária, Viagens'),
+(3, 'Pedro Santos', 'pedro.santos@example.com', '11999990003', 'Rua C, 789', 'Tecnologia, Música'),
+(4, 'Ana Paula', 'ana.paula@example.com', '11999990004', 'Rua D, 101', 'Artes, Cinema'),
+(5, 'Carlos Souza', 'carlos.souza@example.com', '11999990005', 'Rua E, 112', 'Fotografia, Dança'),
+(6, 'Beatriz Lima', 'beatriz.lima@example.com', '11999990006', 'Rua F, 131', 'Moda, Esportes'),
+(7, 'Lucas Almeida', 'lucas.almeida@example.com', '11999990007', 'Rua G, 415', 'Literatura, Música'),
+(8, 'Laura Costa', 'laura.costa@example.com', '11999990008', 'Rua H, 161', 'Teatro, Culinária'),
+(9, 'Marcos Pereira', 'marcos.pereira@example.com', '11999990009', 'Rua I, 718', 'Tecnologia, Leitura'),
+(10, 'Sofia Ferreira', 'sofia.ferreira@example.com', '11999990010', 'Rua J, 192', 'Viagens, Cinema'),
+(11, 'Rafael Rodrigues', 'rafael.rodrigues@example.com', '11999990011', 'Rua K, 220', 'Esportes, Música'),
+(12, 'Fernanda Melo', 'fernanda.melo@example.com', '11999990012', 'Rua L, 334', 'Artes, Fotografia'),
+(13, 'Gustavo Lima', 'gustavo.lima@example.com', '11999990013', 'Rua M, 558', 'Tecnologia, Dança'),
+(14, 'Aline Souza', 'aline.souza@example.com', '11999990014', 'Rua N, 690', 'Culinária, Moda'),
+(15, 'Thiago Silva', 'thiago.silva@example.com', '11999990015', 'Rua O, 712', 'Esportes, Teatro'),
+(16, 'Gabriela Santos', 'gabriela.santos@example.com', '11999990016', 'Rua P, 833', 'Leitura, Moda'),
+(17, 'Felipe Martins', 'felipe.martins@example.com', '11999990017', 'Rua Q, 945', 'Música, Viagens'),
+(18, 'Mariana Carvalho', 'mariana.carvalho@example.com', '11999990018', 'Rua R, 167', 'Artes, Tecnologia'),
+(19, 'Bruno Almeida', 'bruno.almeida@example.com', '11999990019', 'Rua S, 283', 'Fotografia, Leitura'),
+(20, 'Camila Oliveira', 'camila.oliveira@example.com', '11999990020', 'Rua T, 412', 'Moda, Cinema'),
+(21, 'André Costa', 'andre.costa@example.com', '11999990021', 'Rua U, 540', 'Teatro, Viagens');
+
 
 INSERT INTO `Camp_Personalizados_Clientes` (`id_Cliente`, `campo_personalizado`, `detalhe`)
 VALUES
