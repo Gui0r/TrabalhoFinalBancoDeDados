@@ -55,8 +55,11 @@ CREATE TABLE Interesses (
 CREATE TABLE Funcionarios (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     Nome VARCHAR(255) NOT NULL,
+    Email VARCHAR(200), NOT NULL,
+    Telefone VARCHAR(100), NOT NULL
     Cargo VARCHAR(100),
-    HorarioTrabalho DATETIME NOT NULL
+    HorarioTrabalho DATETIME NOT NULL,
+    ClientesAtendidos VARCHAR(200)
 );
 
 CREATE TABLE Clientes_Atendidos_por_Funcionario (
