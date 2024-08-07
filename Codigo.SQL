@@ -47,13 +47,6 @@ CREATE TABLE Clientes (
     Interesses VARCHAR(255)
 );
 
-CREATE TABLE Interesses (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    id_Cliente INT,
-    id_Interesses_e_Temperatura INT,
-    FOREIGN KEY (id_Cliente) REFERENCES Clientes(ID)
-);
-
 CREATE TABLE Funcionarios (
     ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     Nome VARCHAR(255) NOT NULL,
