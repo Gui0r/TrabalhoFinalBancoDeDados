@@ -73,10 +73,11 @@ CREATE TABLE Clientes_Atendidos_por_Funcionario (
 
 CREATE TABLE Interesse_e_Temperatura (
     ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    Interesse_Temperatura_Cliente INT PRIMARY KEY AUTO_INCREMENT,
+    ID_Cliente INT,
     Produto INT,
     Quantidade INT,
     Valor_Total DECIMAL(10, 2) NOT NULL,
     Status VARCHAR(255),
-    Numero_Pedido INT NOT NULL
+    pedido INT NOT NULL,
+    FOREIGN KEY (ID_Cliente) REFERENCES clientes(ID)
 );
