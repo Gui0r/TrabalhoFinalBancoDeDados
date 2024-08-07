@@ -196,7 +196,6 @@ VALUES
 (70, 49.90, 70, 'Cores (Preto/Branco, Cinza/Preto)', 'Camiseta raglan', 'Camiseta Raglan'),
 (71, 79.90, 30, 'Tamanhos (P, M, G, GG)','Calça de velo', 'Calça de Velo');
 
--- Insere os registros na tabela interesse_e_temperatura
 INSERT INTO interesse_e_temperatura (NomeCliente, produto, quantidade, valor_total, status, pedido) VALUES
 ('João Silva', 'Camiseta Básica Branca', 2, 59.80, 'Concluído', 002),
 ('Maria Oliveira', 'Calça Jeans Azul', 1, 99.90, 'Em Andamento', 003),
