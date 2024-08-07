@@ -58,7 +58,7 @@ CREATE TABLE Funcionarios (
     ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     Nome VARCHAR(255) NOT NULL,
     Email VARCHAR(200) NOT NULL,
-    Telefone VARCHAR(100) NOT NULL
+    Telefone VARCHAR(100) NOT NULL,
     Cargo VARCHAR(100),
     HorarioTrabalho DATETIME NOT NULL,
     ClientesAtendidos VARCHAR(200)
