@@ -1,12 +1,3 @@
-CREATE TABLE Pedidos (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    id_Cliente INT,
-    id_Produtos INT,
-    quantidade INT,
-    status INT NOT NULL,
-    FOREIGN KEY (id_Cliente) REFERENCES Clientes(id),
-    FOREIGN KEY (id_Produtos) REFERENCES Produtos(id)
-);
 
 CREATE TABLE Atendimentos (
     ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
