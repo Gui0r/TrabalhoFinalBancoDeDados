@@ -101,26 +101,26 @@ VALUES
 
 INSERT INTO `Funcionarios` (`ID`, `Nome`, `Email`, `Telefone`, `Cargo`, `HorarioTrabalho`)
 VALUES
-(1, 'Ana Lima', 'ana.lima@loja.com', '(11) 91111-1111', 'Vendedora', 'Segunda a Sexta, 09:00 - 18:00'),
-(2, 'Bruno Ferreira', 'bruno.ferreira@loja.com', '(21) 92222-2222', 'Vendedor', 'Segunda a Sábado, 10:00 - 19:00'),
-(3, 'Carla Souza', 'carla.souza@loja.com', '(31) 93333-3333', 'Vendedora', 'Terça a Sábado, 08:00 - 17:00'),
-(4, 'Daniel Costa', 'daniel.costa@loja.com', '(41) 94444-4444', 'Vendedor', 'Segunda a Sexta, 09:00 - 18:00'),
-(5, 'Eliane Pereira', 'eliane.pereira@loja.com', '(51) 95555-5555', 'Vendedora', 'Segunda a Sábado, 10:00 - 19:00'),
-(6, 'Felipe Mendes', 'felipe.mendes@loja.com', '(61) 96666-6666', 'Vendedor', 'Terça a Sábado, 08:00 - 17:00'),
-(7, 'Gabriela Alves', 'gabriela.alves@loja.com', '(71) 97777-7777', 'Vendedora', 'Segunda a Sexta, 09:00 - 18:00'),
-(8, 'Henrique Santos', 'henrique.santos@loja.com', '(81) 98888-8888', 'Vendedor', 'Segunda a Sábado, 10:00 - 19:00'),
-(9, 'Isabel Silva', 'isabel.silva@loja.com', '(91) 99999-9999', 'Vendedora', 'Terça a Sábado, 08:00 - 17:00'),
-(10, 'Jorge Martins', 'jorge.martins@loja.com', '(11) 90000-0000', 'Vendedor', 'Segunda a Sexta, 09:00 - 18:00'),
-(11, 'Karina Oliveira', 'karina.oliveira@loja.com', '(21) 98989-8989', 'Vendedora', 'Segunda a Sábado, 10:00 - 19:00'),
-(12, 'Lucas Souza', 'lucas.souza@loja.com', '(31) 97878-7878', 'Vendedor', 'Terça a Sábado, 08:00 - 17:00'),
-(13, 'Mariana Silva', 'mariana.silva@loja.com', '(41) 96767-6767', 'Vendedora', 'Segunda a Sexta, 09:00 - 18:00'),
-(14, 'Natan Lima', 'natan.lima@loja.com', '(51) 95656-5656', 'Vendedor', 'Segunda a Sábado, 10:00 - 19:00'),
-(15, 'Olivia Santos', 'olivia.santos@loja.com', '(61) 94545-4545', 'Vendedora', 'Terça a Sábado, 08:00 - 17:00'),
-(16, 'Pedro Almeida', 'pedro.almeida@loja.com', '(71) 93434-3434', 'Vendedor', 'Segunda a Sexta, 09:00 - 18:00'),
-(17, 'Quitéria Oliveira', 'quiteria.oliveira@loja.com', '(81) 92323-2323', 'Vendedora', 'Segunda a Sábado, 10:00 - 19:00'),
-(18, 'Ricardo Souza', 'ricardo.souza@loja.com', '(91) 91212-1212', 'Vendedor', 'Terça a Sábado, 08:00 - 17:00'),
-(19, 'Sofia Lima', 'sofia.lima@loja.com', '(11) 90101-0101', 'Vendedora', 'Segunda a Sexta, 09:00 - 18:00'),
-(20, 'Tiago Costa', 'tiago.costa@loja.com', '(21) 99090-9090', 'Vendedor', 'Segunda a Sábado, 10:00 - 19:00');
+(1, 'Ana Lima', 'ana.lima@loja.com', '(11) 91111-1111', 'Vendedora', 'Segunda a Sexta, 09:00 - 18:00', 'João Silva, Maria Oliveira'),
+(2, 'Bruno Ferreira', 'bruno.ferreira@loja.com', '(21) 92222-2222', 'Vendedor', 'Segunda a Sábado, 10:00 - 19:00', 'Pedro Santos, Ana Paula'),
+(3, 'Carla Souza', 'carla.souza@loja.com', '(31) 93333-3333', 'Vendedora', 'Terça a Sábado, 08:00 - 17:00', 'Carlos Souza, Beatriz Lima'),
+(4, 'Daniel Costa', 'daniel.costa@loja.com', '(41) 94444-4444', 'Vendedor', 'Segunda a Sexta, 09:00 - 18:00', 'Lucas Almeida, Laura Costa,),
+(5, 'Eliane Pereira', 'eliane.pereira@loja.com', '(51) 95555-5555', 'Vendedora', 'Segunda a Sábado, 10:00 - 19:00', 'Marcos Pereira, Sofia Ferreira'),
+(6, 'Felipe Mendes', 'felipe.mendes@loja.com', '(61) 96666-6666', 'Vendedor', 'Terça a Sábado, 08:00 - 17:00', 'Rafael Rodrigues, Fernanda Melo'),
+(7, 'Gabriela Alves', 'gabriela.alves@loja.com', '(71) 97777-7777', 'Vendedora', 'Segunda a Sexta, 09:00 - 18:00', 'Gustavo Lima, Aline Souza'),
+(8, 'Henrique Santos', 'henrique.santos@loja.com', '(81) 98888-8888', 'Vendedor', 'Segunda a Sábado, 10:00 - 19:00', 'Thiago Silva, Gabriela Santos'),
+(9, 'Isabel Silva', 'isabel.silva@loja.com', '(91) 99999-9999', 'Vendedora', 'Terça a Sábado, 08:00 - 17:00', 'Felipe Martins, Mariana Carvalho'),
+(10, 'Jorge Martins', 'jorge.martins@loja.com', '(11) 90000-0000', 'Vendedor', 'Segunda a Sexta, 09:00 - 18:00', ' Bruno Almeida, Camila Oliveira'),
+(11, 'Karina Oliveira', 'karina.oliveira@loja.com', '(21) 98989-8989', 'Vendedora', 'Segunda a Sábado, 10:00 - 19:00', 'André Costa, Patricia Lima'),
+(12, 'Lucas Souza', 'lucas.souza@loja.com', '(31) 97878-7878', 'Vendedor', 'Terça a Sábado, 08:00 - 17:00', 'Eduardo Santos, Renata Souza'),
+(13, 'Mariana Silva', 'mariana.silva@loja.com', '(41) 96767-6767', 'Vendedora', 'Segunda a Sexta, 09:00 - 18:00', 'Marcelo Pereira, Daniela Ferreira'),
+(14, 'Natan Lima', 'natan.lima@loja.com', '(51) 95656-5656', 'Vendedor', 'Segunda a Sábado, 10:00 - 19:00', 'Alexandre Rodrigues, Raquel Lima'),
+(15, 'Olivia Santos', 'olivia.santos@loja.com', '(61) 94545-4545', 'Vendedora', 'Terça a Sábado, 08:00 - 17:00', 'Igor Souza, Tatiana Carvalho'),
+(16, 'Pedro Almeida', 'pedro.almeida@loja.com', '(71) 93434-3434', 'Vendedor', 'Segunda a Sexta, 09:00 - 18:00', 'Leonardo Santos, Amanda Almeida'),
+(17, 'Quitéria Oliveira', 'quiteria.oliveira@loja.com', '(81) 92323-2323', 'Vendedora', 'Segunda a Sábado, 10:00 - 19:00', 'Henrique Lima, Isabela Souza'),
+(18, 'Ricardo Souza', 'ricardo.souza@loja.com', '(91) 91212-1212', 'Vendedor', 'Terça a Sábado, 08:00 - 17:00', 'Roberto Oliveira, Simone Ferreira'),
+(19, 'Sofia Lima', 'sofia.lima@loja.com', '(11) 90101-0101', 'Vendedora', 'Segunda a Sexta, 09:00 - 18:00', 'Fernando Rodrigues, Juliana Costa'),
+(20, 'Tiago Costa', 'tiago.costa@loja.com', '(21) 99090-9090', 'Vendedor', 'Segunda a Sábado, 10:00 - 19:00', 'Gabriel Lima, Flávia Santos');
 
 INSERT INTO `Produtos` (`ID`, `tipo`, `Preco`, `Estoque`, `Variacoes`, `Descricao_Produto`, `Nome_Produto`)
 VALUES 
