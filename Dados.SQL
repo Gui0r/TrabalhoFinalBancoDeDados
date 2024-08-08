@@ -298,7 +298,7 @@ INSERT INTO interesse_e_temperatura (NomeCliente, produto, quantidade, valor_tot
 ('Bianca Santos', 'Vestido Preto', 1, 139.90, 'Concluído', 100);
 
 -- Insere os registros na tabela cliente_atendidos_por_funcionario
-INSERT INTO cliente_atendidos_por_funcionario (funcionario_id, cliente) VALUES
+INSERT INTO cliente_atendidos_por_funcionario (funcionario_id, NomeCliente) VALUES
 (1, 'João Silva'),
 (2, 'Maria Oliveira'),
 (3, 'Pedro Santos'),
