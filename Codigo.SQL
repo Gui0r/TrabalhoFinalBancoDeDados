@@ -50,7 +50,7 @@ CREATE TABLE Funcionarios (
 
 CREATE TABLE Clientes_Atendidos_por_Funcionario (
     ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    id_Funcionario INT,
+    NomeFuncionario VARCHAR(200),
     NomeCliente VARCHAR(200),
     FOREIGN KEY (id_Funcionario) REFERENCES Funcionarios(id)
 );
