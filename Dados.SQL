@@ -99,7 +99,7 @@ VALUES
 (19, 19, '2024-07-19 15:00', 'E-mail', 'Envio de informações sobre calças jeans e tênis esportivos com descontos especiais.', 'disponivel'),
 (20, 20, '2024-07-20 10:20', 'Ligação', 'Consulta sobre novos modelos de sapatos sociais e agendamento de visita para prova.', 'disponivel');
 
-INSERT INTO `Funcionarios` (`ID`, `Nome`, `Email`, `Telefone`, `Cargo`, `HorarioTrabalho`)
+INSERT INTO `Funcionarios` (`ID`, `Nome`, `Email`, `Telefone`, `Cargo`, `HorarioTrabalho`, `ClientesAtendidos`)
 VALUES
 (1, 'Ana Lima', 'ana.lima@loja.com', '(11) 91111-1111', 'Vendedora', 'Segunda a Sexta, 09:00 - 18:00', 'João Silva, Maria Oliveira'),
 (2, 'Bruno Ferreira', 'bruno.ferreira@loja.com', '(21) 92222-2222', 'Vendedor', 'Segunda a Sábado, 10:00 - 19:00', 'Pedro Santos, Ana Paula'),
