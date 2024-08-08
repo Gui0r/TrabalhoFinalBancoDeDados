@@ -1,0 +1,9 @@
+CREATE VIEW LeadsPorOrigem AS
+SELECT origem, COUNT(ID) AS TotalLeads
+FROM Clientes
+GROUP BY origem;
+
+CREATE VIEW LeadsPorInteresse AS
+SELECT Interesses, COUNT(ID) AS TotalLeads
+FROM Clientes
+GROUP BY Interesses;
