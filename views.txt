@@ -7,3 +7,22 @@ CREATE VIEW LeadsPorInteresse AS
 SELECT Interesses, COUNT(ID) AS TotalLeads
 FROM Clientes
 GROUP BY Interesses;
+
+CREATE VIEW LeadsPorTemperatura AS
+SELECT IT.Temperatura, COUNT(C.ID) AS TotalLeads
+FROM Interesse_e_Temperatura IT
+JOIN Clientes C ON IT.ID_Cliente = C.ID
+GROUP BY IT.Temperatura;
+
+CREATE VIEW LeadsPorStatusVenda AS
+SELECT IT.Status, COUNT(C.ID) AS TotalLeads
+FROM Interesse_e_Temperatura IT
+JOIN Clientes C ON IT.ID_Cliente = C.ID
+GROUP BY IT.Status;
+
+CREATE VIEW LeadsPorVendedor AS
+SELECT F.Nome AS Vendedor, COUNT(C.ID) AS TotalLeads
+FROM Clientes_Atendidos_por_Funcionario CAF
+JOIN Funcionarios F ON CAF.NomeFuncionario = F.Nome
+JOIN Clientes C ON CAF.NomeCliente = C.Nome
+GROUP BY F.Nome;
