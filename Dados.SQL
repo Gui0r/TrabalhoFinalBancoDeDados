@@ -52,52 +52,53 @@ VALUES
 (50, 'Renato Almeida', 'renato.almeida@email.com', '(51) 96060-6060', 'Rua das Acácias, 321, Porto Alegre, RS', 'Vestidos, Jaquetas');
 
 
-INSERT INTO `Camp_Personalizados_Clientes` (`id_Cliente`, `campo_personalizado`, `detalhe`)
+INSERT INTO `Camp_Personalizados_Clientes` (`NomeCliente`, `campo_personalizado`, `detalhe`)
 VALUES
-(1, 'Comunicação via Mensagens de Texto', 'Cliente deficiente auditivo, comunicação somente via mensagens de texto.'),
-(2, 'Informações Detalhadas', 'Cliente sempre com pressa, passar informações completas de forma concisa.'),
-(3, 'Preferência por Camisetas', 'Cliente possui grande interesse em camisetas, sempre mostrar novos lançamentos.'),
-(4, 'Atendimento Personalizado', 'Cliente gosta de conversar, dar atenção e inserir os produtos na conversa.'),
-(5, 'Descontos Frequentes', 'Cliente valoriza muito descontos, sempre informar sobre promoções e ofertas.'),
-(6, 'Preferência por Compras Online', 'Cliente prefere fazer compras online, evitar sugerir visitas à loja física.'),
-(7, 'Atendimento Rápido', 'Cliente impaciente, fornecer atendimento rápido e direto ao ponto.'),
-(8, 'Preferência por Produtos Ecológicos', 'Cliente valoriza produtos ecológicos e sustentáveis, destacar essas características.'),
-(9, 'Comunicação via E-mail', 'Cliente prefere comunicação via e-mail, evitar ligações telefônicas.'),
-(10, 'Preferência por Vestidos', 'Cliente possui grande interesse em vestidos, sempre mostrar novos lançamentos.'),
-(11, 'Atendimento Detalhado', 'Cliente gosta de detalhes sobre os produtos, fornecer descrições completas.'),
-(12, 'Atenção Especial', 'Cliente gosta de se sentir especial, utilizar seu nome frequentemente durante a conversa.'),
-(13, 'Preferência por Marcas Conhecidas', 'Cliente valoriza produtos de marcas conhecidas, destacar essas opções.'),
-(14, 'Evitar Contato Físico', 'Cliente prefere evitar contato físico, sugerir alternativas como entrega em domicílio.'),
-(15, 'Preferência por Novidades', 'Cliente gosta de novidades, sempre informar sobre os lançamentos mais recentes.'),
-(16, 'Comunicação via WhatsApp', 'Cliente prefere comunicação via WhatsApp, evitar outros meios de contato.'),
-(17, 'Atendimento Pessoal', 'Cliente gosta de atendimento pessoal, sugerir visitas à loja e atendimento exclusivo.'),
-(18, 'Preferência por Promoções', 'Cliente é atraída por promoções, sempre informar sobre descontos e ofertas especiais.'),
-(19, 'Comunicação Formal', 'Cliente prefere comunicação formal e profissional, evitar linguagem informal.'),
-(20, 'Atenção a Devoluções', 'Cliente frequentemente faz devoluções, informar claramente sobre a política de trocas e devoluções.'),
-(21, 'Preferência por Atendimento Telefônico', 'Cliente prefere atendimento telefônico, evitar outros meios de comunicação.');
+('João Silva', 'Comunicação via Mensagens de Texto', 'Cliente deficiente auditivo, comunicação somente via mensagens de texto.'),
+('Maria Oliveira', 'Informações Detalhadas', 'Cliente sempre com pressa, passar informações completas de forma concisa.'),
+('Pedro Santos', 'Preferência por Camisetas', 'Cliente possui grande interesse em camisetas, sempre mostrar novos lançamentos.'),
+('Ana Paula', 'Atendimento Personalizado', 'Cliente gosta de conversar, dar atenção e inserir os produtos na conversa.'),
+('Carlos Souza', 'Descontos Frequentes', 'Cliente valoriza muito descontos, sempre informar sobre promoções e ofertas.'),
+('Beatriz Lima', 'Preferência por Compras Online', 'Cliente prefere fazer compras online, evitar sugerir visitas à loja física.'),
+('Lucas Almeida', 'Atendimento Rápido', 'Cliente impaciente, fornecer atendimento rápido e direto ao ponto.'),
+('Laura Costa', 'Preferência por Produtos Ecológicos', 'Cliente valoriza produtos ecológicos e sustentáveis, destacar essas características.'),
+('Marcos Pereira', 'Comunicação via E-mail', 'Cliente prefere comunicação via e-mail, evitar ligações telefônicas.'),
+('Sofia Ferreira', 'Preferência por Vestidos', 'Cliente possui grande interesse em vestidos, sempre mostrar novos lançamentos.'),
+('Rafael Rodrigues', 'Atendimento Detalhado', 'Cliente gosta de detalhes sobre os produtos, fornecer descrições completas.'),
+('Fernanda Melo', 'Atenção Especial', 'Cliente gosta de se sentir especial, utilizar seu nome frequentemente durante a conversa.'),
+('Gustavo Lima', 'Preferência por Marcas Conhecidas', 'Cliente valoriza produtos de marcas conhecidas, destacar essas opções.'),
+('Aline Souza', 'Evitar Contato Físico', 'Cliente prefere evitar contato físico, sugerir alternativas como entrega em domicílio.'),
+('Thiago Silva', 'Preferência por Novidades', 'Cliente gosta de novidades, sempre informar sobre os lançamentos mais recentes.'),
+('Gabriela Santos', 'Comunicação via WhatsApp', 'Cliente prefere comunicação via WhatsApp, evitar outros meios de contato.'),
+('Felipe Martins', 'Atendimento Pessoal', 'Cliente gosta de atendimento pessoal, sugerir visitas à loja e atendimento exclusivo.'),
+('Mariana Carvalho', 'Preferência por Promoções', 'Cliente é atraída por promoções, sempre informar sobre descontos e ofertas especiais.'),
+('Bruno Almeida', 'Comunicação Formal', 'Cliente prefere comunicação formal e profissional, evitar linguagem informal.'),
+('Camila Oliveira', 'Atenção a Devoluções', 'Cliente frequentemente faz devoluções, informar claramente sobre a política de trocas e devoluções.'),
+('André Costa', 'Preferência por Atendimento Telefônico', 'Cliente prefere atendimento telefônico, evitar outros meios de comunicação.');
 
-INSERT INTO `Atendimentos` (`id_Funcionario`, `id_Cliente`, `data_hora`, `tipo_atendimento`, `conteudo`, `atendimento`)
+INSERT INTO `Atendimentos` (`NomeFuncionario`, `NomeCliente`, `data_hora`, `tipo_atendimento`, `conteudo`, `atendimento`)
 VALUES
-(1, 1, '2024-07-01 10:30', 'Ligação', 'Discutido sobre os novos lançamentos de camisetas e coletadas preferências de cores e tamanhos.', 'disponivel'),
-(2, 2, '2024-07-02 14:15', 'Mensagem de Texto', 'Informações sobre disponibilidade de tênis esportivos e ofertas especiais.', 'disponivel'),
-(3, 3, '2024-07-03 09:45', 'Ligação', 'Esclarecimentos sobre os tamanhos disponíveis de blusas e sugestões de saias combinando.', 'disponivel'),
-(4, 4, '2024-07-04 16:00', 'E-mail', 'Envio de catálogo de bermudas e camisetas com preços promocionais.', 'disponivel'),
-(5, 5, '2024-07-05 11:30', 'Ligação', 'Discutido sobre os novos modelos de ternos e agendada uma visita à loja para prova.', 'disponivel'),
-(6, 6, '2024-07-06 13:20', 'Mensagem de Texto', 'Atualização sobre o pedido de camisetas básicas e previsão de entrega.', 'disponivel'),
-(7, 7, '2024-07-07 15:50', 'E-mail', 'Envio de novidades sobre bermudas esportivas e oferta especial para clientes fidelizados.', 'disponivel'),
-(8, 8, '2024-07-08 10:00', 'Ligação', 'Consulta sobre novos modelos de camisas sociais e agendamento de visita para provar ternos.', 'disponivel'),
-(9, 9, '2024-07-09 14:30', 'Mensagem de Texto', 'Informações sobre disponibilidade de jaquetas jeans e promoções de inverno.', 'disponivel'),
-(10, 10, '2024-07-10 11:00', 'E-mail', 'Envio de catálogo de calças jeans e tênis com descontos exclusivos.', 'disponivel'),
-(11, 11, '2024-07-11 16:45', 'Ligação', 'Discussão sobre modelos de sapatos sociais e agendamento de prova de ternos.', 'disponivel'),
-(12, 12, '2024-07-12 09:15', 'Mensagem de Texto', 'Atualização sobre o pedido de bermudas e previsão de chegada na loja.', 'disponivel'),
-(13, 13, '2024-07-13 14:00', 'E-mail', 'Envio de informações sobre jaquetas de couro e política de trocas.', 'disponivel'),
-(14, 14, '2024-07-14 15:30', 'Ligação', 'Consulta sobre preferências de camisetas e calças e agendamento de visita para prova.', 'disponivel'),
-(15, 15, '2024-07-15 13:00', 'Mensagem de Texto', 'Informações sobre novos modelos de tênis e previsão de chegada.', 'disponivel'),
-(16, 16, '2024-07-16 11:45', 'E-mail', 'Envio de catálogo de bermudas e camisetas com descontos exclusivos.', 'disponivel'),
-(17, 17, '2024-07-17 14:10', 'Ligação', 'Discussão sobre modelos de camisas e agendamento de prova de ternos.', 'disponivel'),
-(18, 18, '2024-07-18 09:30', 'Mensagem de Texto', 'Atualização sobre o pedido de bermudas e previsão de chegada na loja.', 'disponivel'),
-(19, 19, '2024-07-19 15:00', 'E-mail', 'Envio de informações sobre calças jeans e tênis esportivos com descontos especiais.', 'disponivel'),
-(20, 20, '2024-07-20 10:20', 'Ligação', 'Consulta sobre novos modelos de sapatos sociais e agendamento de visita para prova.', 'disponivel');
+('Ana Lima', 'João Silva', '2024-07-01 10:30', 'Ligação', 'Discutido sobre os novos lançamentos de camisetas e coletadas preferências de cores e tamanhos.', 'disponivel'),
+('Bruno Ferreira', 'Pedro Santos', '2024-07-02 14:15', 'Mensagem de Texto', 'Informações sobre disponibilidade de tênis esportivos e ofertas especiais.', 'disponivel'),
+('Carla Souza', 'Beatriz Lima', '2024-07-03 09:45', 'Ligação', 'Esclarecimentos sobre os tamanhos disponíveis de blusas e sugestões de saias combinando.', 'disponivel'),
+('Daniel Costa', 'Lucas Almeida', '2024-07-04 16:00', 'E-mail', 'Envio de catálogo de bermudas e camisetas com preços promocionais.', 'disponivel'),
+('Eliane Pereira', 'Marcos Pereira', '2024-07-05 11:30', 'Ligação', 'Discutido sobre os novos modelos de ternos e agendada uma visita à loja para prova.', 'disponivel'),
+('Felipe Mendes', 'Rafael Rodrigues', '2024-07-06 13:20', 'Mensagem de Texto', 'Atualização sobre o pedido de camisetas básicas e previsão de entrega.', 'disponivel'),
+('Gabriela Alves', 'Gustavo Lima', '2024-07-07 15:50', 'E-mail', 'Envio de novidades sobre bermudas esportivas e oferta especial para clientes fidelizados.', 'disponivel'),
+('Henrique Santos', 'Thiago Silva', '2024-07-08 10:00', 'Ligação', 'Consulta sobre novos modelos de camisas sociais e agendamento de visita para provar ternos.', 'disponivel'),
+('Isabel Silva', 'Felipe Martins', '2024-07-09 14:30', 'Mensagem de Texto', 'Informações sobre disponibilidade de jaquetas jeans e promoções de inverno.', 'disponivel'),
+('Jorge Martins', 'Bruno Almeida', '2024-07-10 11:00', 'E-mail', 'Envio de catálogo de calças jeans e tênis com descontos exclusivos.', 'disponivel'),
+('Karina Oliveira', 'André Costa', '2024-07-11 16:45', 'Ligação', 'Discussão sobre modelos de sapatos sociais e agendamento de prova de ternos.', 'disponivel'),
+('Lucas Souza', 'Eduardo Santos', '2024-07-12 09:15', 'Mensagem de Texto', 'Atualização sobre o pedido de bermudas e previsão de chegada na loja.', 'disponivel'),
+('Mariana Silva', 'Marcelo Pereira', '2024-07-13 14:00', 'E-mail', 'Envio de informações sobre jaquetas de couro e política de trocas.', 'disponivel'),
+('Natan Lima', 'Alexandre Rodrigues', '2024-07-14 15:30', 'Ligação', 'Consulta sobre preferências de camisetas e calças e agendamento de visita para prova.', 'disponivel'),
+('Olivia Santos', 'Igor Souza', '2024-07-15 13:00', 'Mensagem de Texto', 'Informações sobre novos modelos de tênis e previsão de chegada.', 'disponivel'),
+('Pedro Almeida', 'Leonardo Santos', '2024-07-16 11:45', 'E-mail', 'Envio de catálogo de bermudas e camisetas com descontos exclusivos.', 'disponivel'),
+('Quitéria Oliveira', 'Henrique Lima', '2024-07-17 14:10', 'Ligação', 'Discussão sobre modelos de camisas e agendamento de prova de ternos.', 'disponivel'),
+('Ricardo Souza', 'Roberto Oliveira', '2024-07-18 09:30', 'Mensagem de Texto', 'Atualização sobre o pedido de bermudas e previsão de chegada na loja.', 'disponivel'),
+('Sofia Lima', 'Fernando Rodrigues', '2024-07-19 15:00', 'E-mail', 'Envio de informações sobre calças jeans e tênis esportivos com descontos especiais.', 'disponivel'),
+('Tiago Costa', 'Gabriel Lima', '2024-07-20 10:20', 'Ligação', 'Consulta sobre novos modelos de sapatos sociais e agendamento de visita para prova.', 'disponivel');
+
 
 INSERT INTO `Funcionarios` (`ID`, `Nome`, `Email`, `Telefone`, `Cargo`, `HorarioTrabalho`, `ClientesAtendidos`)
 VALUES
