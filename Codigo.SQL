@@ -1,8 +1,8 @@
 
 CREATE TABLE Atendimentos (
     ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    id_Funcionario INT,
-    id_Cliente INT,
+    NomeFuncionario VARCHAR(200),
+    NomeCliente VARCHAR(200),
     data_hora DATETIME,
     tipo_atendimento VARCHAR(255) NOT NULL,
     conteudo VARCHAR(255),
@@ -22,10 +22,9 @@ CREATE TABLE Produtos (
 
 CREATE TABLE Camp_Personalizados_Clientes (
     ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    id_Cliente INT,
+    NomeCliente VARCHAR(200),
     campo_personalizado VARCHAR(255) NOT NULL,
     detalhe VARCHAR(255),
-    FOREIGN KEY (id_Cliente) REFERENCES Clientes(ID)
 );
 
 CREATE TABLE Clientes (
@@ -51,16 +50,14 @@ CREATE TABLE Clientes_Atendidos_por_Funcionario (
     ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     NomeFuncionario VARCHAR(200),
     NomeCliente VARCHAR(200),
-    FOREIGN KEY (id_Funcionario) REFERENCES Funcionarios(id)
 );
 
 CREATE TABLE Interesse_e_Temperatura (
     ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    ID_Cliente INT,
+    NomeCliente VARCHAR(200),
     Produto INT,
     Quantidade INT,
     Valor_Total DECIMAL(10, 2) NOT NULL,
     Status VARCHAR(255),
     pedido INT NOT NULL,
-    FOREIGN KEY (ID_Cliente) REFERENCES clientes(ID)
 );
