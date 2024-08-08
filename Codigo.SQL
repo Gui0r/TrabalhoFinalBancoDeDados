@@ -7,7 +7,7 @@ CREATE TABLE Atendimentos (
     tipo_atendimento VARCHAR(255) NOT NULL,
     conteudo VARCHAR(255),
     atendimento ENUM('disponivel', 'indisponivel') NOT NULL,
-    PRIMARY KEY (id_Funcionario, id_Cliente)
+
 );
 
 CREATE TABLE Produtos (
@@ -25,7 +25,6 @@ CREATE TABLE Camp_Personalizados_Clientes (
     id_Cliente INT,
     campo_personalizado VARCHAR(255) NOT NULL,
     detalhe VARCHAR(255),
-    PRIMARY KEY (id_Cliente, campo_personalizado),
     FOREIGN KEY (id_Cliente) REFERENCES Clientes(ID)
 );
 
