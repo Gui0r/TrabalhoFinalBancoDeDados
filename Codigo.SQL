@@ -12,9 +12,9 @@ CREATE TABLE Atendimentos (
 
 CREATE TABLE Produtos (
     ID INT PRIMARY KEY AUTO_INCREMENT,
-    tipo INT,
+    tipo VARCHAR,
     Preco DECIMAL(10, 2) NOT NULL,
-    Estoque VARCHAR(200),
+    Estoque INT,
     Variacoes VARCHAR(200),
     Descricao_Produto VARCHAR(255) NOT NULL,
     Nome_Produto VARCHAR(255) NOT NULL
