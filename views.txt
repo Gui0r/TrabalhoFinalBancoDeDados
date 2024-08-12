@@ -8,21 +8,106 @@ SELECT Interesses, COUNT(ID) AS TotalLeads
 FROM Clientes
 GROUP BY Interesses;
 
-CREATE VIEW LeadsPorTemperatura AS
-SELECT IT.Temperatura, COUNT(C.ID) AS TotalLeads
-FROM Interesse_e_Temperatura IT
-JOIN Clientes C ON IT.ID_Cliente = C.ID
-GROUP BY IT.Temperatura;
+CREATE VIEW Leads_por_Temperatura AS
+SELECT NomeCliente, Status, COUNT(*) AS Total_Leads
+FROM Interesse_e_Temperatura
+GROUP BY NomeCliente, Status;
 
-CREATE VIEW LeadsPorStatusVenda AS
-SELECT IT.Status, COUNT(C.ID) AS TotalLeads
-FROM Interesse_e_Temperatura IT
-JOIN Clientes C ON IT.ID_Cliente = C.ID
-GROUP BY IT.Status;
+CREATE VIEW Leads_por_Status_de_Venda AS
+SELECT Status, COUNT(*) AS Total_Leads
+FROM Interesse_e_Temperatura
+GROUP BY Status;
 
-CREATE VIEW LeadsPorVendedor AS
-SELECT F.Nome AS Vendedor, COUNT(C.ID) AS TotalLeads
-FROM Clientes_Atendidos_por_Funcionario CAF
-JOIN Funcionarios F ON CAF.NomeFuncionario = F.Nome
-JOIN Clientes C ON CAF.NomeCliente = C.Nome
-GROUP BY F.Nome;
+CREATE VIEW Leads_por_Vendedor AS
+SELECT f.Nome AS NomeFuncionario, COUNT(c.ID) AS Total_Leads
+FROM Clientes_Atendidos_por_Funcionario cf
+JOIN Funcionarios f ON cf.NomeFuncionario = f.Nome
+JOIN Clientes c ON cf.NomeCliente = c.Nome
+GROUP BY f.Nome;
+
+CREATE VIEW Produtos_Mais_Vendidos AS
+SELECT p.Nome_Produto, SUM(i.Quantidade) AS Total_Vendido
+FROM Interesse_e_Temperatura i
+JOIN Produtos p ON i.Produto = p.ID
+GROUP BY p.Nome_Produto
+ORDER BY Total_Vendido DESC;
+
+CREATE VIEW Produtos_com_Maior_Interesse AS
+SELECT p.Nome_Produto, COUNT(i.ID) AS Total_Interessados
+FROM Interesse_e_Temperatura i
+JOIN Produtos p ON i.Produto = p.ID
+GROUP BY p.Nome_Produto
+ORDER BY Total_Interessados DESC;
+
+CREATE VIEW Clientes_Que_Mais_Compraram AS
+SELECT NomeCliente, SUM(Quantidade) AS Total_Comprado
+FROM Interesse_e_Temperatura
+GROUP BY NomeCliente
+ORDER BY Total_Comprado DESC;
+
+CREATE VIEW Clientes_Que_Compram_em_Promocoes AS
+SELECT c.NomeCliente, COUNT(i.ID) AS Total_Promocoes
+FROM Camp_Personalizados_Clientes c
+JOIN Interesse_e_Temperatura i ON c.NomeCliente = i.NomeCliente
+WHERE c.campo_personalizado LIKE '%promo%'
+GROUP BY c.NomeCliente;
+
+CREATE VIEW Leads_com_Interesse_Especifico AS
+SELECT NomeCliente, Interesses
+FROM Clientes
+WHERE Interesses LIKE '%especifico%';
+
+CREATE VIEW Vendas_por_Periodo AS
+SELECT DATE(i.pedido) AS Data, SUM(i.Valor_Total) AS Total_Vendas
+FROM Interesse_e_Temperatura i
+GROUP BY DATE(i.pedido)
+ORDER BY Data DESC;
+
+CREATE VIEW Vendas_por_Funcionario AS
+SELECT f.Nome AS NomeFuncionario, SUM(i.Valor_Total) AS Total_Vendas
+FROM Interesse_e_Temperatura i
+JOIN Clientes_Atendidos_por_Funcionario cf ON i.NomeCliente = cf.NomeCliente
+JOIN Funcionarios f ON cf.NomeFuncionario = f.Nome
+GROUP BY f.Nome;
+
+CREATE VIEW Interacoes_por_Funcionario AS
+SELECT NomeFuncionario, COUNT(*) AS Total_Interacoes
+FROM Atendimentos
+GROUP BY NomeFuncionario;
+
+CREATE VIEW Leads_com_Altas_Temperaturas AS
+SELECT NomeCliente, Status
+FROM Interesse_e_Temperatura
+WHERE Status = 'Concluído';
+
+CREATE VIEW Leads_com_Baixas_Temperaturas AS
+SELECT NomeCliente, Status
+FROM Interesse_e_Temperatura
+WHERE Status = 'baixa';
+
+CREATE VIEW Produtos_com_Estoque_Baixo AS
+SELECT Nome_Produto, Estoque
+FROM Produtos
+WHERE Estoque < 10;
+
+CREATE VIEW Produtos_por_Variacao AS
+SELECT Variacoes, COUNT(*) AS Total_Produtos
+FROM Produtos
+GROUP BY Variacoes;
+
+CREATE VIEW Compras_por_Cliente AS
+SELECT NomeCliente, SUM(Valor_Total) AS Total_Gasto
+FROM Interesse_e_Temperatura
+GROUP BY NomeCliente;
+
+CREATE VIEW Leads_sem_Interacoes_Recentes AS
+SELECT c.Nome
+FROM Clientes c
+LEFT JOIN Atendimentos a ON c.Nome = a.NomeCliente
+WHERE a.data_hora IS NULL OR a.data_hora < DATE_SUB(NOW(), INTERVAL 30 DAY);
+
+CREATE VIEW Pedidos_Pendentes_de_Entrega AS
+SELECT i.NomeCliente, i.Valor_Total, i.pedido
+FROM Interesse_e_Temperatura i
+WHERE i.Status = 'pendente';
+
