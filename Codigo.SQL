@@ -6,7 +6,7 @@ CREATE TABLE Atendimentos (
     data_hora DATETIME,
     tipo_atendimento VARCHAR(255) NOT NULL,
     conteudo VARCHAR(255),
-    atendimento ENUM('disponivel', 'indisponivel') NOT NULL,
+    atendimento ENUM('disponivel', 'indisponivel') NOT NULL
 
 );
 
@@ -24,7 +24,7 @@ CREATE TABLE Camp_Personalizados_Clientes (
     ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     NomeCliente VARCHAR(200),
     campo_personalizado VARCHAR(255) NOT NULL,
-    detalhe VARCHAR(255),
+    detalhe VARCHAR(255)
 );
 
 CREATE TABLE Clientes (
@@ -49,7 +49,7 @@ CREATE TABLE Funcionarios (
 CREATE TABLE Clientes_Atendidos_por_Funcionario (
     ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     NomeFuncionario VARCHAR(200),
-    NomeCliente VARCHAR(200),
+    NomeCliente VARCHAR(200)
 );
 
 CREATE TABLE Interesse_e_Temperatura (
@@ -59,5 +59,5 @@ CREATE TABLE Interesse_e_Temperatura (
     Quantidade INT,
     Valor_Total DECIMAL(10, 2) NOT NULL,
     Status VARCHAR(255),
-    pedido INT NOT NULL,
+    pedido INT NOT NULL
 );
