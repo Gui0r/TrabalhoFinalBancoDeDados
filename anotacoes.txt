@@ -7,4 +7,3 @@ Campos_Personalizados: ID, LeadID, NomeCampo, Valor
 Clientes: ID PK, Nome, email, Telefone, Endereco, Interesses
 Atendimentos: id, PK id_Funcionario, PK id_Cliente, data_hora, conteudo, atendimento
 Clientes_Atendidos_por_Funcionario: id_Funcionario FK, id_Clientes FK
-Eu quero gozar
