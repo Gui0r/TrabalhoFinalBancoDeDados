@@ -49,7 +49,7 @@ CREATE VIEW Clientes_Que_Compram_em_Promocoes AS
 SELECT c.NomeCliente, COUNT(i.ID) AS Total_Promocoes
 FROM Camp_Personalizados_Clientes c
 JOIN Interesse_e_Temperatura i ON c.NomeCliente = i.NomeCliente
-WHERE c.campo_personalizado LIKE '%promo%'
+WHERE d.detalhe LIKE '%promo%'
 GROUP BY c.NomeCliente;
 
 CREATE VIEW Leads_com_Interesse_Especifico AS
@@ -83,7 +83,7 @@ WHERE Status = 'Concluído';
 CREATE VIEW Leads_com_Baixas_Temperaturas AS
 SELECT NomeCliente, Status
 FROM Interesse_e_Temperatura
-WHERE Status = 'baixa';
+WHERE Status = 'Cancelado';
 
 CREATE VIEW Produtos_com_Estoque_Baixo AS
 SELECT Nome_Produto, Estoque
