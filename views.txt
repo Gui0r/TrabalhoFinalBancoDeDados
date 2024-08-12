@@ -55,7 +55,7 @@ GROUP BY c.NomeCliente;
 CREATE VIEW Leads_com_Interesse_Especifico AS
 SELECT NomeCliente, Interesses
 FROM Clientes
-WHERE Interesses LIKE '%especifico%';
+WHERE Interesses LIKE 'Camiseta';
 
 CREATE VIEW Vendas_por_Periodo AS
 SELECT DATE(i.pedido) AS Data, SUM(i.Valor_Total) AS Total_Vendas
